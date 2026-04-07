@@ -9,44 +9,135 @@
     content="James Sinnott is a technology executive with 20+ years of experience leading enterprise infrastructure, cloud transformation, cybersecurity, and AI-enabled business modernization."
   />
   <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111827;
+      --muted: #475569;
+      --heading: #0f172a;
+      --border: #e2e8f0;
+      --accent: #0f172a;
+      --accent-hover: #1e293b;
+      --surface: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      color: #111;
-      background: #fff;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
     }
 
     .container {
-      max-width: 900px;
+      max-width: 920px;
       margin: 0 auto;
-      padding: 48px 24px 64px;
+      padding: 40px 24px 64px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 28px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .topbar a,
+    .contact-links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .topbar a:hover,
+    .contact-links a:hover {
+      text-decoration: underline;
+    }
+
+    .button-link {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff !important;
+      text-decoration: none !important;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: background 0.2s ease;
+    }
+
+    .button-link:hover {
+      background: var(--accent-hover);
+    }
+
+    header {
+      padding: 8px 0 12px;
+      margin-bottom: 24px;
     }
 
     h1, h2 {
       margin-top: 0;
-      color: #0f172a;
+      color: var(--heading);
     }
 
     h1 {
-      font-size: 2.4rem;
-      margin-bottom: 8px;
+      font-size: 2.5rem;
+      line-height: 1.15;
+      margin-bottom: 10px;
     }
 
     .subtitle {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .hero {
+      font-size: 1.08rem;
+      max-width: 760px;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .quick-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 9px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--accent);
+      text-decoration: none;
       font-weight: 600;
-      color: #334155;
-      margin-bottom: 28px;
+      font-size: 0.95rem;
+    }
+
+    .pill:hover {
+      background: #eef2f7;
     }
 
     section {
-      margin-bottom: 40px;
+      margin-bottom: 42px;
     }
 
     h2 {
       font-size: 1.35rem;
-      border-bottom: 2px solid #e2e8f0;
+      border-bottom: 2px solid var(--border);
       padding-bottom: 8px;
       margin-bottom: 16px;
     }
@@ -64,16 +155,29 @@
       margin-bottom: 10px;
     }
 
-    .contact a {
-      color: #0f172a;
-      text-decoration: none;
+    .contact-box {
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
     }
 
-    .contact a:hover {
-      text-decoration: underline;
+    .contact-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer-note {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.95rem;
     }
 
     @media (max-width: 640px) {
+      .container {
+        padding: 28px 18px 48px;
+      }
+
       h1 {
         font-size: 2rem;
       }
@@ -82,26 +186,41 @@
         font-size: 1rem;
       }
 
-      .container {
-        padding: 32px 20px 48px;
+      .hero {
+        font-size: 1rem;
+      }
+
+      .topbar {
+        justify-content: flex-start;
       }
     }
   </style>
 </head>
 <body>
   <main class="container">
+    <div class="topbar">
+      <a href="https://www.linkedin.com/in/jamessinnott/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="button-link" href="https://www.linkedin.com/in/jamessinnott/" target="_blank" rel="noopener noreferrer">Connect</a>
+    </div>
+
     <header>
       <h1>James Sinnott</h1>
       <div class="subtitle">Senior Director, Cloud &amp; Infrastructure Strategy</div>
-      <p>
-        Technology executive with 20+ years of experience leading enterprise infrastructure,
-        cloud transformation, and cybersecurity across global, regulated environments.
-        Known for aligning technology strategy with business objectives to drive cost
-        efficiency, operational resilience, and scalable growth.
+      <p class="hero">
+        Technology executive with 20+ years leading enterprise infrastructure, cloud transformation,
+        and cybersecurity across global, regulated environments.
       </p>
+
+      <div class="quick-links">
+        <a class="pill" href="#summary">Executive Summary</a>
+        <a class="pill" href="#impact">Key Impact</a>
+        <a class="pill" href="#focus">Leadership Focus</a>
+        <a class="pill" href="#approach">Approach</a>
+        <a class="pill" href="#connect">Connect</a>
+      </div>
     </header>
 
-    <section>
+    <section id="summary">
       <h2>Executive Summary</h2>
       <p>
         I lead enterprise IT organizations through large-scale transformation initiatives
@@ -111,7 +230,7 @@
       </p>
       <p>
         I partner closely with executive leadership to translate business priorities into
-        technology roadmaps—delivering measurable outcomes including multimillion-dollar
+        technology roadmaps, delivering measurable outcomes including multimillion-dollar
         cost savings, improved system performance, and strengthened security and compliance
         frameworks.
       </p>
@@ -128,7 +247,7 @@
       </p>
     </section>
 
-    <section>
+    <section id="impact">
       <h2>Key Impact</h2>
       <ul>
         <li>Delivered <strong>$2M+ in cost savings</strong> through cloud optimization and infrastructure transformation</li>
@@ -141,7 +260,7 @@
       </ul>
     </section>
 
-    <section>
+    <section id="focus">
       <h2>Leadership Focus</h2>
       <ul>
         <li>Cloud &amp; Infrastructure Strategy (Azure, AWS, GCP, VMware)</li>
@@ -156,7 +275,7 @@
       </ul>
     </section>
 
-    <section>
+    <section id="approach">
       <h2>Approach</h2>
       <p>
         I focus on building technology organizations that operate as strategic business
@@ -176,9 +295,15 @@
       </p>
     </section>
 
-    <section class="contact">
+    <section id="connect" class="contact-box">
       <h2>Connect</h2>
-      <p>🔗 <a href="https://linkedin.com/in/jamessinnott" target="_blank" rel="noopener noreferrer">linkedin.com/in/jamessinnott</a></p>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/jamessinnott/" target="_blank" rel="noopener noreferrer">linkedin.com/in/jamessinnott</a>
+        <a class="button-link" href="https://www.linkedin.com/in/jamessinnott/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+      </div>
+      <p class="footer-note">
+        For professional inquiries, please connect via LinkedIn.
+      </p>
     </section>
   </main>
 </body>
