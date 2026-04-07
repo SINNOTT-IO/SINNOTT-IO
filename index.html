@@ -37,37 +37,22 @@
     }
 
     .container {
-      max-width: 920px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 40px 24px 64px;
+      padding: 36px 20px 60px;
     }
 
     .topbar {
       display: flex;
       justify-content: flex-end;
-      align-items: center;
       margin-bottom: 28px;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .topbar a,
-    .contact-links a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .topbar a:hover,
-    .contact-links a:hover {
-      text-decoration: underline;
     }
 
     .button-link {
       display: inline-block;
       background: var(--accent);
-      color: #fff !important;
-      text-decoration: none !important;
+      color: #ffffff;
+      text-decoration: none;
       padding: 10px 16px;
       border-radius: 8px;
       font-weight: 700;
@@ -79,8 +64,7 @@
     }
 
     header {
-      padding: 8px 0 12px;
-      margin-bottom: 24px;
+      margin-bottom: 32px;
     }
 
     h1, h2 {
@@ -89,42 +73,41 @@
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.4rem;
       line-height: 1.15;
       margin-bottom: 10px;
     }
 
     .subtitle {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 700;
       color: var(--muted);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .hero {
-      font-size: 1.08rem;
+      font-size: 1.05rem;
       max-width: 760px;
-      color: var(--text);
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     .quick-links {
       display: flex;
-      gap: 12px;
       flex-wrap: wrap;
-      margin-top: 20px;
+      gap: 10px;
+      margin-top: 18px;
     }
 
     .pill {
       display: inline-block;
-      padding: 9px 14px;
+      padding: 8px 13px;
       border: 1px solid var(--border);
       border-radius: 999px;
       background: var(--surface);
       color: var(--accent);
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.94rem;
     }
 
     .pill:hover {
@@ -132,11 +115,11 @@
     }
 
     section {
-      margin-bottom: 42px;
+      margin-bottom: 40px;
     }
 
     h2 {
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       border-bottom: 2px solid var(--border);
       padding-bottom: 8px;
       margin-bottom: 16px;
@@ -160,22 +143,14 @@
       padding-top: 20px;
     }
 
-    .contact-links {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .footer-note {
-      margin-top: 12px;
+    .contact-box p {
       color: var(--muted);
-      font-size: 0.95rem;
+      margin-bottom: 14px;
     }
 
     @media (max-width: 640px) {
       .container {
-        padding: 28px 18px 48px;
+        padding: 28px 18px 44px;
       }
 
       h1 {
@@ -199,8 +174,7 @@
 <body>
   <main class="container">
     <div class="topbar">
-      <a href="https://www.linkedin.com/in/jamessinnott/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a class="button-link" href="https://www.linkedin.com/in/jamessinnott/" target="_blank" rel="noopener noreferrer">Connect</a>
+      <a class="button-link" href="https://www.linkedin.com/in/jamessinnott/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
     </div>
 
     <header>
@@ -297,13 +271,10 @@
 
     <section id="connect" class="contact-box">
       <h2>Connect</h2>
-      <div class="contact-links">
-        <a href="https://www.linkedin.com/in/jamessinnott/" target="_blank" rel="noopener noreferrer">linkedin.com/in/jamessinnott</a>
-        <a class="button-link" href="https://www.linkedin.com/in/jamessinnott/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
-      </div>
-      <p class="footer-note">
-        For professional inquiries, please connect via LinkedIn.
+      <p>
+        For professional inquiries, please connect with me on LinkedIn.
       </p>
+      <a class="button-link" href="https://www.linkedin.com/in/jamessinnott/" target="_blank" rel="noopener noreferrer">View LinkedIn Profile</a>
     </section>
   </main>
 </body>
